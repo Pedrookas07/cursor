@@ -1,0 +1,3 @@
+2025-09-07 08:42:01,904 - LogChannel - INFO - 🚀 Sistema de logs funcionando!
+2025-09-07 08:42:01,905 - LogChannel - WARNING - ⚠️ Este é um teste de aviso
+2025-09-07 08:42:01,905 - LogChannel - ERROR - ❌ Este é um teste de erro

@@ -1,0 +1,5 @@
+2025-09-07 08:42:10,397 - LogChannel - INFO - Aplicação iniciada com sucesso | Dados: {"versao": "1.0.0", "ambiente": "desenvolvimento", "timestamp_inicio": 1757234530.3976195}
+2025-09-07 08:42:11,398 - LogChannel - WARNING - Este é um aviso - será enviado para o Slack por padrão | Dados: {"memoria_uso": "85%", "cpu_uso": "45%"}
+2025-09-07 08:42:12,398 - LogChannel - ERROR - Erro simulado para teste | Dados: {"erro_codigo": "E001", "modulo": "example_usage", "detalhes": "Este é apenas um teste de erro"}
+2025-09-07 08:42:13,398 - LogChannel - ERROR - Erro de divisão por zero: division by zero | Dados: {"operacao": "10 / 0", "tipo_erro": "ZeroDivisionError", "funcao": "main"}
+2025-09-07 08:42:13,399 - LogChannel - CRITICAL - Sistema crítico - teste de alerta máximo | Dados: {"sistema": "core", "impacto": "alto", "acao_requerida": "verificacao_imediata"}
