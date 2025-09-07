@@ -1,0 +1,4 @@
+2025-09-07 08:57:24,009 - LogChannel - DEBUG - Debug: Sistema iniciado
+2025-09-07 08:57:24,009 - LogChannel - INFO - Info: Teste de informação | Dados: {"usuario": "teste", "versao": "1.0"}
+2025-09-07 08:57:24,009 - LogChannel - WARNING - Warning: Teste de aviso
+2025-09-07 08:57:24,009 - LogChannel - ERROR - Error: Teste de erro | Dados: {"codigo": "E001"}
