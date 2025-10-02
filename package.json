@@ -1,0 +1,22 @@
+{
+    "name": "rebuss-logs-worker",
+    "version": "1.0.0",
+    "description": "Cloudflare Worker para receber logs do Rebuss Log Bot",
+    "main": "worker.js",
+    "scripts": {
+        "deploy": "wrangler deploy",
+        "dev": "wrangler dev",
+        "test": "wrangler dev --local"
+    },
+    "keywords": [
+        "cloudflare",
+        "worker",
+        "slack",
+        "logs"
+    ],
+    "author": "Rebuss",
+    "license": "MIT",
+    "devDependencies": {
+        "wrangler": "^3.0.0"
+    }
+}

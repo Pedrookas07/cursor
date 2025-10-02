@@ -1,0 +1,198 @@
+{
+    "name": "ambiente_ia_completo",
+    "description": "Ambiente de desenvolvimento focado em Inteligência Artificial",
+    "agentCanUpdateSnapshot": true,
+    "python": {
+        "version": "3.11",
+        "dependencies": {
+            "core": [
+                "numpy>=1.24.0",
+                "pandas>=2.0.0",
+                "scipy>=1.10.0",
+                "matplotlib>=3.7.0",
+                "seaborn>=0.12.0",
+                "plotly>=5.15.0"
+            ],
+            "machine_learning": [
+                "scikit-learn>=1.3.0",
+                "xgboost>=1.7.0",
+                "lightgbm>=4.0.0",
+                "catboost>=1.2.0"
+            ],
+            "deep_learning": [
+                "tensorflow>=2.13.0",
+                "torch>=2.0.0",
+                "torchvision>=0.15.0",
+                "torchaudio>=2.0.0",
+                "keras>=2.13.0",
+                "transformers>=4.30.0",
+                "accelerate>=0.20.0"
+            ],
+            "nlp": [
+                "nltk>=3.8.0",
+                "spacy>=3.6.0",
+                "gensim>=4.3.0",
+                "textblob>=0.17.0",
+                "sentence-transformers>=2.2.0"
+            ],
+            "computer_vision": [
+                "opencv-python>=4.8.0",
+                "pillow>=10.0.0",
+                "albumentations>=1.3.0",
+                "imageio>=2.31.0"
+            ],
+            "data_processing": [
+                "dask>=2023.5.0",
+                "polars>=0.19.0",
+                "pyarrow>=12.0.0",
+                "fastparquet>=0.8.0"
+            ],
+            "jupyter": [
+                "jupyter>=1.0.0",
+                "jupyterlab>=4.0.0",
+                "ipywidgets>=8.0.0",
+                "notebook>=6.5.0",
+                "nbconvert>=7.0.0"
+            ],
+            "monitoring": [
+                "wandb>=0.15.0",
+                "tensorboard>=2.13.0",
+                "mlflow>=2.5.0",
+                "neptune-client>=1.0.0"
+            ],
+            "deployment": [
+                "fastapi>=0.100.0",
+                "uvicorn>=0.22.0",
+                "streamlit>=1.25.0",
+                "gradio>=3.40.0",
+                "flask>=2.3.0"
+            ],
+            "utilities": [
+                "tqdm>=4.65.0",
+                "rich>=13.0.0",
+                "click>=8.1.0",
+                "python-dotenv>=1.0.0",
+                "pydantic>=2.0.0"
+            ]
+        }
+    },
+    "node": {
+        "version": "18.0.0",
+        "dependencies": {
+            "ai_frameworks": [
+                "@tensorflow/tfjs-node",
+                "@tensorflow/tfjs",
+                "onnxruntime-node",
+                "ml-matrix"
+            ],
+            "development": [
+                "typescript",
+                "@types/node",
+                "nodemon",
+                "ts-node"
+            ]
+        }
+    },
+    "scripts": {
+        "install": "pip install -r requirements.txt && npm install",
+        "start": "jupyter lab",
+        "notebook": "jupyter notebook",
+        "tensorboard": "tensorboard --logdir=./logs",
+        "test": "pytest tests/",
+        "format": "black . && isort .",
+        "lint": "flake8 . && pylint .",
+        "train": "python scripts/train.py",
+        "inference": "python scripts/inference.py",
+        "api": "uvicorn api.main:app --reload",
+        "streamlit": "streamlit run app.py"
+    },
+    "devDependencies": {
+        "python": [
+            "pytest>=7.4.0",
+            "pytest-cov>=4.1.0",
+            "black>=23.0.0",
+            "isort>=5.12.0",
+            "flake8>=6.0.0",
+            "pylint>=2.17.0",
+            "mypy>=1.4.0",
+            "pre-commit>=3.3.0"
+        ],
+        "node": [
+            "eslint",
+            "prettier",
+            "@typescript-eslint/parser",
+            "@typescript-eslint/eslint-plugin"
+        ]
+    },
+    "environments": {
+        "development": {
+            "description": "Ambiente de desenvolvimento local",
+            "python_path": "./venv/bin/python",
+            "jupyter_port": 8888,
+            "tensorboard_port": 6006,
+            "api_port": 8000
+        },
+        "production": {
+            "description": "Ambiente de produção",
+            "python_path": "/usr/bin/python3",
+            "workers": 4,
+            "gpu_enabled": true
+        },
+        "gpu": {
+            "description": "Ambiente com suporte a GPU",
+            "cuda_version": "11.8",
+            "cudnn_version": "8.6.0",
+            "tensorflow_gpu": true,
+            "pytorch_cuda": true
+        }
+    },
+    "configurations": {
+        "jupyter": {
+            "extensions": [
+                "jupyterlab-git",
+                "jupyterlab-lsp",
+                "jupyterlab-code-formatter",
+                "jupyterlab-widgets"
+            ],
+            "settings": {
+                "theme": "dark",
+                "font_size": 14,
+                "auto_save": true
+            }
+        },
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow"
+            ]
+        }
+    },
+    "gpu_support": {
+        "cuda": {
+            "version": "11.8",
+            "cudnn": "8.6.0",
+            "tensorrt": "8.6.0"
+        },
+        "rocm": {
+            "version": "5.4.0"
+        }
+    },
+    "data_storage": {
+        "local": "./data/",
+        "cloud": {
+            "aws_s3": "s3://your-bucket/",
+            "gcp_gcs": "gs://your-bucket/",
+            "azure_blob": "https://your-account.blob.core.windows.net/"
+        }
+    },
+    "model_management": {
+        "huggingface": {
+            "cache_dir": "./models/huggingface/",
+            "token": "${HUGGINGFACE_TOKEN}"
+        },
+        "local_models": "./models/local/",
+        "checkpoints": "./checkpoints/"
+    }
+}
