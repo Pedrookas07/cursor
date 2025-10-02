@@ -1,0 +1,11 @@
+{
+  "numpy": {
+    "matrix_operations": 0.11487317085266113,
+    "version": "2.3.3"
+  },
+  "memory": {
+    "memory_used_mb": 56.73046875,
+    "total_memory_gb": 15.64117431640625,
+    "available_memory_gb": 1.9376144409179688
+  }
+}
