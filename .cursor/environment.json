@@ -1,7 +1,109 @@
 {
-    "name": "ambiente_ia_completo",
-    "description": "Ambiente de desenvolvimento focado em Inteligência Artificial",
+    "snapshot": "snapshot-20251002-67675303-413a-47db-bf16-200990d94628",
+    "terminals": [],
+    "name": "ambiente_ia_ultra_performance",
+    "description": "Configuração otimizada para máxima performance em desenvolvimento de IA",
     "agentCanUpdateSnapshot": true,
+    "maxConcurrentAgents": 8,
+    "agentConfigurations": {
+        "ai_development": {
+            "enabled": true,
+            "priority": "high",
+            "resources": {
+                "cpu_cores": 4,
+                "memory_gb": 16,
+                "gpu_enabled": true,
+                "gpu_memory_gb": 8
+            },
+            "capabilities": [
+                "code_generation",
+                "model_training",
+                "data_processing",
+                "optimization",
+                "debugging",
+                "testing"
+            ]
+        },
+        "data_processing": {
+            "enabled": true,
+            "priority": "high",
+            "resources": {
+                "cpu_cores": 6,
+                "memory_gb": 32,
+                "disk_io_optimized": true
+            },
+            "capabilities": [
+                "data_cleaning",
+                "feature_engineering",
+                "data_visualization",
+                "statistical_analysis",
+                "parallel_processing"
+            ]
+        },
+        "model_optimization": {
+            "enabled": true,
+            "priority": "critical",
+            "resources": {
+                "cpu_cores": 8,
+                "memory_gb": 64,
+                "gpu_enabled": true,
+                "gpu_memory_gb": 16,
+                "tensor_cores": true
+            },
+            "capabilities": [
+                "hyperparameter_tuning",
+                "model_compression",
+                "quantization",
+                "pruning",
+                "distributed_training"
+            ]
+        },
+        "code_analysis": {
+            "enabled": true,
+            "priority": "medium",
+            "resources": {
+                "cpu_cores": 2,
+                "memory_gb": 8
+            },
+            "capabilities": [
+                "static_analysis",
+                "performance_profiling",
+                "security_scanning",
+                "code_review",
+                "refactoring_suggestions"
+            ]
+        }
+    },
+    "performanceOptimizations": {
+        "parallelProcessing": {
+            "enabled": true,
+            "maxWorkers": 16,
+            "threadPoolSize": 32,
+            "asyncOperations": true
+        },
+        "memoryManagement": {
+            "enabled": true,
+            "gcOptimization": true,
+            "memoryPooling": true,
+            "cacheSize": "2GB",
+            "swapOptimization": true
+        },
+        "gpuAcceleration": {
+            "enabled": true,
+            "cudaVersion": "11.8",
+            "cudnnVersion": "8.6.0",
+            "tensorrtEnabled": true,
+            "mixedPrecision": true,
+            "gradientCheckpointing": true
+        },
+        "networkOptimization": {
+            "enabled": true,
+            "connectionPooling": true,
+            "compression": true,
+            "caching": true,
+            "bandwidthOptimization": true
+        }
+    },
     "python": {
         "version": "3.11",
         "dependencies": {
@@ -93,6 +195,106 @@
             ]
         }
     },
+    "aiFrameworks": {
+        "pytorch": {
+            "version": "2.1.0",
+            "cudaSupport": true,
+            "distributedTraining": true,
+            "optimizations": [
+                "torch.compile",
+                "torch.jit",
+                "torch.fx",
+                "torch.ao"
+            ]
+        },
+        "tensorflow": {
+            "version": "2.13.0",
+            "cudaSupport": true,
+            "xlaOptimization": true,
+            "tensorrtIntegration": true,
+            "optimizations": [
+                "tf.function",
+                "tf.keras.mixed_precision",
+                "tf.distribute",
+                "tf.data"
+            ]
+        },
+        "jax": {
+            "version": "0.4.20",
+            "gpuSupport": true,
+            "tpuSupport": true,
+            "optimizations": [
+                "jax.jit",
+                "jax.vmap",
+                "jax.pmap",
+                "jax.remat"
+            ]
+        },
+        "transformers": {
+            "version": "4.35.0",
+            "accelerateSupport": true,
+            "deepspeedSupport": true,
+            "optimizations": [
+                "gradient_checkpointing",
+                "mixed_precision",
+                "model_parallelism",
+                "data_parallelism"
+            ]
+        }
+    },
+    "monitoring": {
+        "enabled": true,
+        "metrics": [
+            "cpu_usage",
+            "memory_usage",
+            "gpu_usage",
+            "disk_io",
+            "network_io",
+            "model_performance",
+            "training_metrics"
+        ],
+        "alerts": {
+            "highMemoryUsage": "85%",
+            "highCpuUsage": "90%",
+            "gpuMemoryUsage": "95%",
+            "diskSpace": "90%"
+        },
+        "logging": {
+            "level": "INFO",
+            "format": "structured",
+            "retention": "30d"
+        }
+    },
+    "workflows": {
+        "autoOptimization": {
+            "enabled": true,
+            "schedule": "continuous",
+            "actions": [
+                "memory_cleanup",
+                "cache_optimization",
+                "model_compression",
+                "code_optimization"
+            ]
+        },
+        "intelligentCaching": {
+            "enabled": true,
+            "strategy": "lru_with_prediction",
+            "cacheSize": "4GB",
+            "prefetching": true
+        },
+        "adaptiveScaling": {
+            "enabled": true,
+            "minResources": {
+                "cpu": 2,
+                "memory": "4GB"
+            },
+            "maxResources": {
+                "cpu": 16,
+                "memory": "128GB",
+                "gpu": 4
+            }
+        }
+    },
     "scripts": {
         "install": "pip install -r requirements.txt && npm install",
         "start": "jupyter lab",
@@ -104,7 +306,12 @@
         "train": "python scripts/train.py",
         "inference": "python scripts/inference.py",
         "api": "uvicorn api.main:app --reload",
-        "streamlit": "streamlit run app.py"
+        "streamlit": "streamlit run app.py",
+        "optimize": "python .cursor/scripts/optimize_performance.py",
+        "benchmark": "python .cursor/scripts/benchmark_ai.py",
+        "profile": "python .cursor/scripts/profile_models.py",
+        "cleanup": "python .cursor/scripts/cleanup_resources.py",
+        "monitor": "python .cursor/scripts/monitor_performance.py"
     },
     "devDependencies": {
         "python": [
@@ -126,17 +333,54 @@
     },
     "environments": {
         "development": {
-            "description": "Ambiente de desenvolvimento local",
+            "description": "Ambiente de desenvolvimento otimizado",
             "python_path": "./venv/bin/python",
             "jupyter_port": 8888,
             "tensorboard_port": 6006,
-            "api_port": 8000
+            "api_port": 8000,
+            "resources": {
+                "cpu_cores": 8,
+                "memory_gb": 32,
+                "gpu_enabled": true
+            },
+            "optimizations": [
+                "fast_compilation",
+                "hot_reload",
+                "debug_symbols"
+            ]
         },
         "production": {
             "description": "Ambiente de produção",
             "python_path": "/usr/bin/python3",
             "workers": 4,
             "gpu_enabled": true
+        },
+        "training": {
+            "description": "Ambiente para treinamento de modelos",
+            "resources": {
+                "cpu_cores": 16,
+                "memory_gb": 128,
+                "gpu_enabled": true,
+                "gpu_count": 4
+            },
+            "optimizations": [
+                "distributed_training",
+                "mixed_precision",
+                "gradient_accumulation"
+            ]
+        },
+        "inference": {
+            "description": "Ambiente para inferência otimizada",
+            "resources": {
+                "cpu_cores": 12,
+                "memory_gb": 64,
+                "gpu_enabled": true
+            },
+            "optimizations": [
+                "model_quantization",
+                "tensorrt_optimization",
+                "batch_processing"
+            ]
         },
         "gpu": {
             "description": "Ambiente com suporte a GPU",
@@ -194,5 +438,7 @@
         },
         "local_models": "./models/local/",
         "checkpoints": "./checkpoints/"
-    }
+    },
+    "install": "npm install",
+    "start": "npm run dev"
 }
