@@ -1,6 +1,6 @@
 # Dockerfile for Cursor Background Agents
 # This provides the base environment for background agents
-# Version: 1.0 - Initial setup
+# Version: 1.1 - Enhanced with pinned versions and additional tools
 
 FROM ubuntu:22.04
 
@@ -18,8 +18,6 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     python3-venv \
     python3-dev \
-    nodejs \
-    npm \
     vim \
     nano \
     htop \
@@ -34,6 +32,10 @@ RUN apt-get update && apt-get install -y \
     tar \
     gzip \
     && rm -rf /var/lib/apt/lists/*
+
+# Install Node.js LTS (more recent version)
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && apt-get install -y nodejs
 
 # Upgrade pip to latest version
 RUN python3 -m pip install --upgrade pip

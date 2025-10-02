@@ -1,0 +1,12 @@
+# Arquivo .cursorignore
+# Liste aqui os diretórios ou padrões de arquivos que você quer ignorar durante a indexação.
+   node_modules/
+   *.log
+   .env
+   dist/
+   build/
+   tmp/
+  *.sqlite
+   .DS_Store
+
+# Adicione abaixo os arquivos ou pastas que não devem ser indexados pelo Cursor:
