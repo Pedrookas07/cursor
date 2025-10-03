@@ -1,0 +1,39 @@
+{
+  "timestamp": "20251003_000605",
+  "log": {
+    "LOG_FILE": "logs/app.log",
+    "LOG_LEVEL": "INFO",
+    "SLACK_WEBHOOK_URL": null,
+    "SLACK_CHANNEL": "#logs",
+    "SEND_WARNINGS_TO_SLACK": "true",
+    "SEND_ERRORS_TO_SLACK": "true"
+  },
+  "slack": {
+    "SLACK_BOT_TOKEN": null,
+    "SLACK_CHANNEL_ID": null,
+    "SLACK_CHANNEL_NAME": "#rebuss-logs",
+    "BOT_USER_ID": null,
+    "DEFAULT_HOURS_BACK": "24",
+    "MAX_MESSAGES_PER_REQUEST": "100",
+    "EXPORT_DIRECTORY": "exports"
+  },
+  "cloudflare": {
+    "CLOUDFLARE_WORKER_URL": null,
+    "CLOUDFLARE_API_TOKEN": null,
+    "CLOUDFLARE_ACCOUNT_ID": null,
+    "CLOUDFLARE_KV_NAMESPACE_ID": null,
+    "CLOUDFLARE_TIMEOUT_SECONDS": "15"
+  },
+  "wrangler": {
+    "WRANGLER_PROJECT_NAME": "chanfana-openapi",
+    "WRANGLER_COMPATIBILITY_DATE": "2024-09-27",
+    "ENVIRONMENT": "production"
+  },
+  "general": {
+    "LOGS_DIRECTORY": "logs",
+    "EXPORTS_DIRECTORY": "exports",
+    "DEFAULT_TIMEOUT": "30",
+    "MAX_RETRIES": "3",
+    "RETRY_INTERVAL": "5"
+  }
+}

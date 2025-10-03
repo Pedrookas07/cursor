@@ -1,0 +1,7 @@
+name = "chanfana-openapi"
+main = "worker.js"
+compatibility_date = "2024-09-27"
+
+# Variáveis de ambiente
+[vars]
+ENVIRONMENT = "production"

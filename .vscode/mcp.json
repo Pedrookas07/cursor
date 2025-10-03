@@ -1,0 +1,11 @@
+{
+    "servers": {
+        "DevBox": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@microsoft/devbox-mcp@latest"
+            ]
+        }
+    }
+}
